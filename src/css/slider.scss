@@ -1,0 +1,65 @@
+$transition-time: 1s;
+$font-color: #FFF; 
+$font-size: 26px;
+
+@mixin transition($value) {
+	transition: $value;
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	    -ms-transition: $value;
+	     -o-transition: $value;
+}
+
+@mixin transform-translate($value1,$value2) {
+	-webkit-transform: translate($value1, $value2);
+	   -moz-transform: translate($value1, $value2);
+	    -ms-transform: translate($value1, $value2);
+	     -o-transform: translate($value1, $value2);
+	        transform: translate($value1, $value2);
+}
+
+#slider {
+	width: 100%;
+	max-width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	.slider__inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include transition($transition-time transform);
+	}
+	.slider-slide {
+		height: 100%;
+		background-size: cover;
+		display: inline-block;
+		background-position: center center;
+		position: relative;
+		.slider-slide__context {
+			color: $font-color;
+			text-align: center;
+			font-size: $font-size;
+			position: absolute;
+			left: 50%;
+			top:50%;
+			@include transform-translate(-50%,-50%);
+		}
+	}
+	.slider__next {
+		position: absolute;
+		right:0;
+		top:50%;
+		@include transform-translate(0,-50%);
+		padding:10px;
+		font-size: 24px;
+	}
+	.slider__prev {
+		position: absolute;
+		left:0;
+		top:50%;
+		@include transform-translate(0,-50%);
+		padding:10px;
+		font-size: 24px;
+	}
+}
