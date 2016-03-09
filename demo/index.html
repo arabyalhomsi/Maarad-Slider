@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>myBlog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--  Stylesheets -->
+    <link rel="stylesheet" href="../src/css/slider.css">
+	<style>
+		* {
+			margin:0;
+			padding:0;
+			outline:0;
+		}
+	</style>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    <div id="slider">
+    	<div class="slider__inner">
+    		<div class="slider-slide" style="background-image:url('images/slide-1.jpg');">
+    			<div class="slider-slide__context">
+    				<h1>Hello World, I am Maarad</h1>
+    			</div>
+    		</div><div class="slider-slide" style="background-image:url('images/slide-3.png');">
+    			<div class="slider-slide__context">
+    				<h1>How are you ?</h1>
+    			</div>
+    		</div><div class="slider-slide" style="background-image:url('images/slide-2.png');">
+    			<div class="slider-slide__context">
+    				<h1>Are you good ?</h1>
+    			</div>
+    		</div><div class="slider-slide" style="background-image:url('images/slide-3.png');">
+    			<div class="slider-slide__context">
+    				<h1>I hope so :)</h1>
+    			</div>
+    		</div>
+    	</div>
+    	<button class="slider__next">&gt;</button>
+    	<button class="slider__prev">&lt;</button>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="../src/js/slider.js"></script>
+    <script>
+    	var s = new Maarad({
+			SliderID: 'slider',
+			animation: 'move', // under construction
+			auto: 2000, //beta
+			infinity: true
+		});
+    </script>
+  </body>
+</html>

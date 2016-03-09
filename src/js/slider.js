@@ -1,5 +1,3 @@
-// Licence here
-
 /**
  * Maarad JavaScript Slider
  * 
@@ -7,21 +5,9 @@
  * "Maarad" is an Arabic word that means gallery.
  */
 
-/**
- * Function to set the value of transform: translate3d()
- * @return {String} that look like translate3d(0px,0px,0px)	
- */
-function setTranslate3d(x, y, z) {
-    'use strict';
-
-	return 'translate3d(' + x + 'px, ' + y + 'px, ' + z + 'px)';
-}
-
 
 /**
  * Maarad this function creates new instances from Maarad
- * @constructor
- * @return <>
  */
 var Maarad = function (options) {
     'use strict';
@@ -148,3 +134,14 @@ var Maarad = function (options) {
 		});
 	}
 };
+
+/**
+ * Function to set the value of transform: translate3d()
+ * @return {String} that look like translate3d(0px,0px,0px)	
+ */
+function setTranslate3d(x, y, z) {
+    'use strict';
+
+	return 'translate3d(' + x + 'px, ' + y + 'px, ' + z + 'px)';
+}
+
